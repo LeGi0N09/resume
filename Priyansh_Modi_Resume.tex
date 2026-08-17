@@ -1,0 +1,192 @@
+%-------------------------
+% Resume in Latex
+% Author : Priyansh Modi
+% Based on: Jake Gutierrez / sb2nov resume template
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure generated PDF is machine readable / ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Priyansh Modi} \\ \vspace{1pt}
+    \small
+    7043103661 $|$
+    \href{mailto:priyanshmodi9@gmail.com}{\underline{priyanshmodi9@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/priyanshmodi09/}{\underline{linkedin.com/in/priyanshmodi09}} $|$
+    Ahmedabad, Gujarat, India
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{
+Data Engineer with experience building Python and SQL-based data pipelines, Snowflake automation, and enterprise data governance solutions. Skilled in data ingestion, transformation, validation, metadata management, dataset ownership, API integrations, and workflow automation. Experienced with cloud, DevOps, and distributed data technologies, with additional hands-on exposure to GenAI and Agentic AI.
+}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+    \textbf{Languages}{: Python, SQL, C\#, C++, TypeScript} \\
+    \textbf{Data Engineering}{: Snowflake, PySpark, Apache Spark, Databricks, Kafka, pandas, PostgreSQL, Microsoft SQL Server} \\
+    \textbf{Cloud \& DevOps}{: AWS, Azure, Docker, Jenkins, OpenShift, Git, GitHub} \\
+    \textbf{APIs \& Automation}{: FastAPI, REST APIs, APScheduler, Power Automate, SharePoint, Microsoft Graph API} \\
+    \textbf{AI}{: Generative AI, Agentic AI, LangChain, LangGraph, MCP}
+}}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+    {Capgemini}{Pune, Maharashtra, India}
+    {Analyst -- Data Engineering / Data Classification \& Governance}{Jul 2024 -- Present}
+\resumeItemListStart
+    \resumeItem{Build Python automation and data pipelines for ingestion, transformation, validation, and enterprise data governance workflows.}
+    \resumeItem{Develop Snowflake solutions for schema validation, metadata management, dataset ownership, scanning, remediation, and escalation workflows.}
+    \resumeItem{Integrate FastAPI, SharePoint/Excel, Power Automate, and Microsoft Graph API to automate governance workflows and reduce manual effort.}
+    \resumeItem{Automate scheduled workflows with Python/APScheduler and support Docker, Jenkins, and OpenShift deployments.}
+\resumeItemListEnd
+
+\resumeSubheading
+    {Powertronics Control System Pvt Ltd}{Ahmedabad, Gujarat, India}
+    {Software Developer}{Apr 2024 -- Jul 2024}
+\resumeItemListStart
+    \resumeItem{Built internal tools and desktop applications using VB.NET and .NET Framework within a Scrum team.}
+    \resumeItem{Developed SSRS reports and transformed Microsoft SQL Server data for business reporting; deployed solutions on Microsoft Azure.}
+\resumeItemListEnd
+
+\resumeSubheading
+    {Freelance}{Self-employed}
+    {Full-Stack Developer}{Jul 2023 -- Feb 2024}
+\resumeItemListStart
+    \resumeItem{Delivered web and desktop applications for 4+ clients across requirements, UI, backend, database design, and deployment.}
+    \resumeItem{Built .NET and JavaScript solutions with SQL Server, normalized schemas, stored procedures, and complex SQL queries; deployed applications to Azure.}
+\resumeItemListEnd
+
+\resumeSubheading
+    {Shri Om Infotech}{Ahmedabad, Gujarat, India}
+    {Jr. .NET Developer}{Jun 2022 -- Jun 2023}
+\resumeItemListStart
+    \resumeItem{Developed client-facing ASP.NET/C\# applications backed by Microsoft SQL Server.}
+    \resumeItem{Resolved application defects and optimized SQL queries; collaborated with clients and developers in Agile workflows using Git.}
+\resumeItemListEnd
+
+\resumeSubheading
+    {TatvaSoft}{Remote}
+    {Software Development Intern}{Jun 2022}
+\resumeItemListStart
+    \resumeItem{Contributed to Book-e-Sell using JavaScript, ASP.NET, C\#, and MySQL; implemented features and fixes using Git.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+    {\textbf{Investment Portfolio Tracker} $|$ \emph{Python, Flask, Dhan API}}{}
+\resumeItemListStart
+    \resumeItem{Built a portfolio analytics application integrating the Dhan API with XIRR and CAGR calculations for investment tracking.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+    {\textbf{Fooddy} $|$ \emph{HTML, CSS, JavaScript, PHP, MySQL}}{}
+\resumeItemListStart
+    \resumeItem{Built a restaurant ordering and management application covering customer orders, kitchen communication, table assignment, and billing.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+    \textbf{AWS Certified Cloud Practitioner} -- AWS \hfill Dec 2025 -- Dec 2028 \\
+    \textbf{Academy Accreditation -- Databricks Fundamentals} -- Databricks \hfill Mar 2025 \\
+    \textbf{Claude Certified Architect -- Foundations (CCA-F)} -- Anthropic \hfill Jun 2026 -- Jun 2027
+}}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {LDRP Institute of Technology and Research}{Gandhinagar, Gujarat, India}
+    {Bachelor of Engineering in Computer Engineering; CPI: 7.83/10}{2019 -- 2023}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
