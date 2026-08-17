@@ -9,8 +9,15 @@ Most currently available templates either focus on two columns, or are multiple 
 ### Build using Docker
 
 ```sh
+bash build.sh
+```
+
+Or manually:
+
+```sh
 docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex Priyansh_Modi_Resume.tex
+docker run --rm -i -v "$PWD":/data latex sh -c \
+    "pdflatex Priyansh_Modi_Resume.tex && pdftoppm -r 150 -png -singlefile Priyansh_Modi_Resume.pdf preview"
 ```
 
 ### Preview
