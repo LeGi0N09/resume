@@ -15,7 +15,7 @@ docker run --rm -i -v "$PWD":/data latex pdflatex Priyansh_Modi_Resume.tex
 
 ### Preview
 
-![Resume Screenshot](/resume_preview.png)
+![Resume Screenshot](preview.png)
 
 ### License
 
