@@ -1,26 +1,39 @@
-name: Docker Image CI
+name: Build resume PDF
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ master ]
+    branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
-  compile:
-    name: Compile resume pdf
+  build:
+    name: Build resume PDF
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
-      - name: Run the build process with Docker
-        uses: addnab/docker-run-action@v3
+
+      - name: Build Docker image (uses repo Dockerfile)
+        run: docker build -t latex .
+
+      - name: Compile PDF and generate preview
+        run: |
+          set -e
+          # run the container, compile the TeX file (run pdflatex twice to resolve refs)
+          docker run --rm -i -v "${{ github.workspace }}":/data latex sh -c "\
+            cd /data && \
+            pdflatex -interaction=nonstopmode -halt-on-error Priyansh_Modi_Resume.tex || true && \
+            pdflatex -interaction=nonstopmode -halt-on-error Priyansh_Modi_Resume.tex && \
+            pdftoppm -r 150 -png -singlefile Priyansh_Modi_Resume.pdf preview \
+          "
+
+      - name: Upload compiled PDF and preview image
+        uses: actions/upload-artifact@v4
         with:
-          image: thomasweise/docker-texlive-full:latest
-          options: -v ${{ github.workspace }}:/data
-          run: |
-            cd data
-            pdflatex sourabh_bajaj_resume.tex
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Apply pdflatex changes
+          name: resume-artifacts
+          path: |
+            Priyansh_Modi_Resume.pdf
+            preview.png
