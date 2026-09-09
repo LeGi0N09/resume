@@ -1,4 +1,4 @@
-A single-page, one-column resume for software developers. It uses the base latex templates and fonts to provide ease of use and installation when trying to update the resume. The different sections are clearly documented and custom commands are used to provide consistent formatting. The three main sections in the resume are education, experience, and projects.
+A single-page, one-column resume for Data Engineer. It uses the base latex templates and fonts to provide ease of use and installation when trying to update the resume. The different sections are clearly documented and custom commands are used to provide consistent formatting. The three main sections in the resume are education, experience, and projects.
 
 ### Motivation
 
@@ -26,4 +26,4 @@ docker run --rm -i -v "$PWD":/data latex sh -c \
 
 ### License
 
-MIT License - Copyright (c) 2025 Priyansh Modi
+MIT License - Copyright (c) 2026 Priyansh Modi
